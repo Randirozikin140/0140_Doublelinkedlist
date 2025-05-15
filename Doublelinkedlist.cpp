@@ -45,6 +45,10 @@ public:
         if(START != NULL)
             START->previous = newNode;
         
+        //step 6:
+        newNode->previous = NULL;
+
+        //step 7: 
         
     }
 };
