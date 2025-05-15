@@ -66,6 +66,10 @@ public:
             return;
         }
 
+        //step 9: insert between current and current ->next
+        newNode->next = current->next; // Step 9a: newNode.next = current.next
+        newNode->previous = current;   // Step 9b: newNode.previous = current
         
+
     }
 };
