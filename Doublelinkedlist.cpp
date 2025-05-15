@@ -69,7 +69,25 @@ public:
         //step 9: insert between current and current ->next
         newNode->next = current->next; // Step 9a: newNode.next = current.next
         newNode->previous = current;   // Step 9b: newNode.previous = current
-        
 
+        //insert last node
+        if (current->next != NULL)
+            current->next->previous = newNode; // Step 9c: current.next.previous = newNode
+
+            
+    }
+
+    void hapus()
+    {
+        if(START == NULL)
+        {
+            cout <<"\nMasukkan NIM yang akan didelete";
+            int rollNo;
+            cin >> rollNo;
+
+            Node *current = START;
+
+            //step 1:
+        }
     }
 };
