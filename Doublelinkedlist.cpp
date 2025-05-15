@@ -121,4 +121,86 @@ public:
             cout << "Record with roll number" << " rollno " << " delete" << endl;
         }
     }
+    void treverse()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        //step 1: mark first node as current
+        Node *currentNode = START;
+
+        //step 2: repeat until currentNode == NULL
+        cout << "i + 1 << " << currentNode->noMhs <<  endl;
+        int i = 0;
+        while (currentNode != NULL)
+        {
+            cout << i + 1 << ". " << currentNode->noMhs << " " << endl;
+
+            //step 3: Move to next node
+            currentNode = currentNode->next;
+            i++;
+        }
+    }
+
+    void revtraverse()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        //step 1: move to the last node
+        Node *currentNode = START;
+        int i = 0;
+        while (currentNode->next != NULL)
+        {
+            currentNode = currentNode->next;
+            i++;
+        }
+
+        //step 2: Traverse backwards
+        cout << i + 1 << "." << currentNode->noMhs << " " << endl; 
+        while (currentNode != NULL)
+        {
+            cout << i + 1 << ". " << currentNode->noMhs << " " << endl;
+
+            //step 3: Move to previous node
+            currentNode = currentNode->previous;
+            i--;
+        }
+    }
+
+    void searchData()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        int rollNo;
+        cout << "\nEnter the roll number to search: ";
+        cin >> rollNo;
+
+        Node *current = START;
+
+        //step 1: traverse to find matching roll number
+        while (current != NULL && current->noMhs != rollNo)
+            current = current->next;
+
+        //step 2: output result
+        if (current == NULL)
+        {
+            cout << "Record not found\n";
+        }
+        else
+        {
+            cout << "Record found\n";
+            cout << "Roll number: " << current->noMhs << endl;
+        }
+    }
 };
