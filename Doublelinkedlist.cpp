@@ -49,6 +49,6 @@ public:
         newNode->previous = NULL;
 
         //step 7: 
-        
+        START = newNode;
     }
 };
