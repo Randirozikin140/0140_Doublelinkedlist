@@ -50,5 +50,13 @@ public:
 
         //step 7: 
         START = newNode;
+        return;
+
+
+        //insert to between node
+        //step 8: Locate position for insertion
+        Node *current = START;
+        
+
     }
 };
