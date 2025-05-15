@@ -87,7 +87,21 @@ public:
 
             Node *current = START;
 
-            //step 1:
+            //step 1: Tranverse the list to find the mode 
+            while (current != NULL && current->noMhs != rollNo)
+            {
+                current = current->next;
+            }
+            if(current == NULL)
+            {
+                cout << "Record not found" << endl;
+                return;
+            }
+            //step 2: if node is at the beginning
+            if (current == START)
+            {
+                
+            }
         }
     }
 };
