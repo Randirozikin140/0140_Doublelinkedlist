@@ -100,8 +100,13 @@ public:
             //step 2: if node is at the beginning
             if (current == START)
             {
-                
+                START = current->next; // Step 2a: START = current.next
+                if (START != NULL)
+                {
+                    START->previous = NULL; // Step 2b: START.previous = NULL
+                }
             }
+            
         }
     }
 };
